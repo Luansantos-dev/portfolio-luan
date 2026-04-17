@@ -1,0 +1,20 @@
+<div class="page-enter skills">
+  <header class="skills__header">
+    <h1 class="skills__title">Skills</h1>
+    <p class="skills__lead">
+      Stack e práticas que uso no dia a dia para entregar com qualidade e rastreabilidade.
+    </p>
+  </header>
+  <div class="skills__grid">
+    @for (g of groups; track g.title) {
+      <section class="skills__group">
+        <h2 class="skills__group-title">{{ g.title }}</h2>
+        <div class="skills__list">
+          @for (item of g.items; track item.name) {
+            <app-skill-bar [name]="item.name" [level]="item.level" />
+          }
+        </div>
+      </section>
+    }
+  </div>
+</div>

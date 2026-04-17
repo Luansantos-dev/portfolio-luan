@@ -1,0 +1,41 @@
+<div class="page-enter contact">
+  <header class="contact__header">
+    <h1 class="contact__title">Contato</h1>
+    <p class="contact__lead">
+      Fale sobre seu produto, os dados que você precisa enxergar ou a automação que está travando o time.
+    </p>
+  </header>
+
+  <div class="contact__grid">
+    @for (t of tiles; track t.title) {
+      @if (t.href) {
+        <a
+          class="contact__tile contact__tile--link"
+          [href]="t.href"
+          [attr.target]="t.external ? '_blank' : null"
+          [attr.rel]="t.external ? 'noopener noreferrer' : null"
+        >
+          <span class="contact__tile-label">{{ t.title }}</span>
+          <span class="contact__tile-value">{{ t.value }}</span>
+        </a>
+      } @else {
+        <div class="contact__tile">
+          <span class="contact__tile-label">{{ t.title }}</span>
+          <span class="contact__tile-value">{{ t.value }}</span>
+        </div>
+      }
+    }
+  </div>
+
+  <div class="contact__cta">
+    <p class="contact__cta-text">Vamos trabalhar juntos?</p>
+    <a
+      class="btn btn--primary"
+      href="https://linkedin.com/in/luansantosdev"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Falar no LinkedIn
+    </a>
+  </div>
+</div>

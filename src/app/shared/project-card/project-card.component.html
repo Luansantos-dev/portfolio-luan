@@ -1,0 +1,28 @@
+@if (project.url) {
+  <a
+    class="card card--link"
+    [href]="project.url"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <p class="card__type">{{ project.type }}</p>
+    <h3 class="card__name">{{ project.name }}</h3>
+    <p class="card__desc">{{ project.description }}</p>
+    <ul class="card__tags" aria-label="Tecnologias">
+      @for (tag of project.tags; track tag) {
+        <li class="card__pill">{{ tag }}</li>
+      }
+    </ul>
+  </a>
+} @else {
+  <article class="card">
+    <p class="card__type">{{ project.type }}</p>
+    <h3 class="card__name">{{ project.name }}</h3>
+    <p class="card__desc">{{ project.description }}</p>
+    <ul class="card__tags" aria-label="Tecnologias">
+      @for (tag of project.tags; track tag) {
+        <li class="card__pill">{{ tag }}</li>
+      }
+    </ul>
+  </article>
+}

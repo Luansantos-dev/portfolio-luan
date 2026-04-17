@@ -1,0 +1,10 @@
+.home {
+  display: block;
+}
+
+.app-main {
+  min-height: calc(100vh - 140px);
+  padding: clamp(1.25rem, 4vw, 3rem) clamp(1rem, 5vw, 4rem) 3rem;
+  max-width: 1120px;
+  margin: 0 auto;
+}

@@ -1,0 +1,22 @@
+<div class="page-enter services">
+  <header class="services__header">
+    <h1 class="services__title">Serviços</h1>
+    <p class="services__lead">
+      Pacotes orientados a resultado — combinamos escopo, dados e entrega contínua quando faz sentido.
+    </p>
+  </header>
+  <ol class="services__list">
+    @for (s of services; track s.number) {
+      <li class="services__item">
+        <span class="services__num" aria-hidden="true">{{ s.number }}</span>
+        <div class="services__body">
+          <div class="services__top">
+            <h2 class="services__name">{{ s.name }}</h2>
+            <span class="services__price">{{ s.price }}</span>
+          </div>
+          <p class="services__desc">{{ s.description }}</p>
+        </div>
+      </li>
+    }
+  </ol>
+</div>

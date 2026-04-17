@@ -1,0 +1,9 @@
+<div class="skill">
+  <div class="skill__row">
+    <span class="skill__name">{{ name }}</span>
+    <span class="skill__value">{{ clamped }}%</span>
+  </div>
+  <div class="skill__track" role="presentation">
+    <div class="skill__fill" [style.width.%]="clamped"></div>
+  </div>
+</div>

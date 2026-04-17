@@ -1,0 +1,13 @@
+<div class="page-enter projects">
+  <header class="projects__header">
+    <h1 class="projects__title">Projetos</h1>
+    <p class="projects__lead">
+      Seleção de trabalhos focados em performance, dados acionáveis e experiência consistente.
+    </p>
+  </header>
+  <div class="projects__grid">
+    @for (p of projects; track p.name) {
+      <app-project-card [project]="p" />
+    }
+  </div>
+</div>

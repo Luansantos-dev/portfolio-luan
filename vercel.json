@@ -1,0 +1,12 @@
+{
+  "buildCommand": "ng build --configuration production",
+  "outputDirectory": "dist/portfolio/browser",
+  "installCommand": "npm install",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [{ "key": "X-Frame-Options", "value": "DENY" }]
+    }
+  ]
+}
