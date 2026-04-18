@@ -39,7 +39,15 @@
 .services__num {
   font-family: var(--font-mono);
   font-size: 0.85rem;
-  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  text-shadow: 0 0 18px rgba(167, 139, 250, 0.35);
+  padding: 0.2rem 0.45rem;
+  border-radius: 6px;
+  background: rgba(167, 139, 250, 0.08);
+  border: 1px solid rgba(167, 139, 250, 0.22);
+  line-height: 1;
 }
 
 .services__body {
@@ -63,12 +71,23 @@
   font-weight: 500;
 }
 
-.services__price {
+.services__consult {
   font-family: var(--font-mono);
-  font-size: 0.9rem;
-  font-weight: 700;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
   color: var(--accent);
   white-space: nowrap;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  background: linear-gradient(
+    135deg,
+    rgba(167, 139, 250, 0.18),
+    rgba(139, 92, 246, 0.1)
+  );
+  border: 1px solid rgba(167, 139, 250, 0.35);
+  box-shadow: 0 0 0 1px rgba(167, 139, 250, 0.06) inset,
+    0 4px 14px rgba(139, 92, 246, 0.12);
 }
 
 .services__desc {
@@ -82,5 +101,9 @@
   .services__item {
     grid-template-columns: 1fr;
     gap: 0.5rem;
+  }
+
+  .services__num {
+    justify-self: start;
   }
 }

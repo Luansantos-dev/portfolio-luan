@@ -1,28 +1,31 @@
-<div class="page-enter home">
+<section class="home">
   <div class="home__row">
     <div class="home__content">
-      <p class="home__tag">{{ profile.tagline }}</p>
+      <p #tag class="home__tag">{{ profile.tagline }}</p>
+
       <h1 class="home__title">
-        <span class="home__title-line">{{ profile.heroTitle[0] }}</span>
-        <span class="home__title-sep"> / </span>
-        <span class="home__title-line">{{ profile.heroTitle[1] }}</span>
-        <span class="home__title-sep"> / </span>
-        <span class="home__title-line">{{ profile.heroTitle[2] }}</span>
+        <span #name class="home__name">{{ profile.heroTitle[0] }}</span>
+        <br />
+        <span #typeEl class="home__type"></span>
       </h1>
-      <p class="home__subtitle">{{ profile.heroSubtitle }}</p>
-      <div class="home__actions">
+
+      <p #subtitle class="home__subtitle">{{ profile.heroSubtitle }}</p>
+
+      <div #actions class="home__actions">
         <a routerLink="/projetos" class="btn btn--primary">Ver projetos</a>
         <a routerLink="/contato" class="btn btn--ghost">Entrar em contato</a>
       </div>
-      <div class="home__stats" role="list">
-        @for (line of stats; track line) {
-          <div class="home__stat" role="listitem">
+
+      <div #stats class="home__stats">
+        @for (line of statLines; track line) {
+          <div class="home__stat">
             <p class="home__stat-value">{{ line }}</p>
           </div>
         }
       </div>
     </div>
-    <div class="home__avatar-wrap">
+
+    <div #avatar class="home__avatar-wrap">
       <img
         class="home__avatar"
         src="assets/avatar.png"
@@ -32,4 +35,4 @@
       />
     </div>
   </div>
-</div>
+</section>

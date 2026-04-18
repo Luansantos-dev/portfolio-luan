@@ -35,3 +35,8 @@
   background: linear-gradient(90deg, #8b5cf6, var(--accent));
   transition: width 400ms ease;
 }
+
+.skill-bar__fill {
+  display: block;
+  transform-origin: left center;
+}

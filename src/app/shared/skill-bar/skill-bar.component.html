@@ -4,6 +4,10 @@
     <span class="skill__value">{{ clamped }}%</span>
   </div>
   <div class="skill__track" role="presentation">
-    <div class="skill__fill" [style.width.%]="clamped"></div>
+    <div
+      class="skill__fill skill-bar__fill"
+      [attr.data-level]="clamped"
+      [style.width.%]="clamped"
+    ></div>
   </div>
 </div>

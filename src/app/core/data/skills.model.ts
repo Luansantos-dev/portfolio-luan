@@ -5,5 +5,5 @@ export interface SkillItem {
 
 export interface SkillGroup {
   title: string;
-  items: SkillItem[];
+  skills: SkillItem[];
 }
