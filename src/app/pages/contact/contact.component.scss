@@ -79,3 +79,18 @@
     grid-template-columns: 1fr;
   }
 }
+.contact__tile--whatsapp {
+  border-color: rgba(167, 139, 250, 0.25);
+
+  &:hover {
+    border-color: var(--accent);
+    background: rgba(167, 139, 250, 0.06);
+  }
+}
+
+.contact__tile-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent);
+}

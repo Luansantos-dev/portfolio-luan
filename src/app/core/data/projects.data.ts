@@ -2,32 +2,24 @@ import { Project } from './project.model';
 
 export const PROJECTS: Project[] = [
   {
-    type: 'Web App · React',
-    name: 'Finance Dashboard',
-    description:
-      'Painel financeiro com KPIs em tempo real, filtros por período e exportação para planilhas.',
-    tags: ['TypeScript', 'Charts', 'API REST'],
-    url: 'https://anubisink.vercel.app',
+    type: 'Angular · Firebase',
+    name: 'CRUD Users',
+    description: 'Sistema de gerenciamento de usuários com criação, edição, remoção e feedback visual. Integração com Firebase Firestore.',
+    tags: ['Angular', 'TypeScript', 'Firebase', 'SCSS'],
+    url: 'https://crud-users-nu.vercel.app/home',
   },
   {
-    type: 'SaaS · Kanban',
-    name: 'CRM Kanban',
-    description:
-      'Quadros arrastáveis, estágios customizáveis e rastreamento de leads para times comerciais.',
-    tags: ['Angular', 'Drag & Drop', 'UX'],
+    type: 'Angular · Node.js',
+    name: 'Users Filter',
+    description: 'Aplicação de filtragem de usuários em tempo real por nome, data de cadastro e status. Interface responsiva com Angular Material.',
+    tags: ['Angular', 'Angular Material', 'Node.js', 'SCSS'],
+    url: 'https://usersfilter.vercel.app',
   },
   {
-    type: 'Produto completo',
-    name: 'Landing+Admin',
-    description:
-      'Landing de captura integrada a painel admin para conteúdo, leads e métricas de conversão.',
-    tags: ['Landing', 'Admin', 'Analytics'],
-  },
-  {
-    type: 'Plataforma interna',
-    name: 'Axion Hub',
-    description:
-      'Portal unificado para métricas operacionais, permissões por papel e integrações com webhooks.',
-    tags: ['Design System', 'RBAC', 'Integrações'],
+    type: 'Angular · GSAP',
+    name: 'Portfolio Pessoal',
+    description: 'Portfólio desenvolvido com Angular 18+, Standalone Components, animações GSAP e deploy no Vercel.',
+    tags: ['Angular', 'GSAP', 'TypeScript', 'SCSS'],
+    url: 'https://github.com/Luansantos-dev/portfolio-luan',
   },
 ];
