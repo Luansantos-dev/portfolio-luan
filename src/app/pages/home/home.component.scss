@@ -47,7 +47,6 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
-  margin: 0;
   max-width: 420px;
 }
 
@@ -96,6 +95,7 @@
 .home__name {
   display: block;
   color: #fff;
+  margin-bottom: 0.5rem;
 }
 
 .home__type {
