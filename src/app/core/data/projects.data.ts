@@ -22,4 +22,11 @@ export const PROJECTS: Project[] = [
     tags: ['Angular', 'GSAP', 'TypeScript', 'SCSS'],
     url: 'https://github.com/Luansantos-dev/portfolio-luan',
   },
+  {
+    type: 'Angular · Firebase',
+    name: 'Painel de Agendamentos',
+    description: 'Dashboard para gestão de agendamentos com calendário interativo, KPIs, status por cliente e CTA para contato via WhatsApp.',
+    tags: ['Angular', 'Firebase', 'TypeScript', 'SCSS'],
+    url: 'https://github.com/Luansantos-dev',
+  },
 ];

@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { profile } from '../../core/data/profile.data';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
@@ -37,4 +38,19 @@ export class ContactComponent {
       external: true,
     },
   ] as const;
+
+  form = { name: '', email: '', message: '' };
+  submitted = false;
+
+  onSubmit(): void {
+    const text = encodeURIComponent(
+      `Olá Luan! Me chamo ${this.form.name}.\n\n${this.form.message}\n\nEmail: ${this.form.email}`
+    );
+    window.open(`https://wa.me/5571992752076?text=${text}`, '_blank');
+    this.submitted = true;
+    setTimeout(() => {
+      this.submitted = false;
+      this.form = { name: '', email: '', message: '' };
+    }, 4000);
+  }
 }
