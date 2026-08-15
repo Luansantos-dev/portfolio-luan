@@ -2,6 +2,7 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
+  NgZone,
   OnDestroy,
   ViewChild,
 } from '@angular/core';
@@ -32,6 +33,20 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   @ViewChild('stats') statsEl!: ElementRef<HTMLElement>;
 
   private tl!: gsap.core.Timeline;
+
+  constructor(private ngZone: NgZone) {}
+
+  private onMouseMove = (e: MouseEvent): void => {
+    const xPercent = (e.clientX / window.innerWidth - 0.5) * 20;
+    const yPercent = (e.clientY / window.innerHeight - 0.5) * 20;
+
+    gsap.to(this.avatar.nativeElement, {
+      x: xPercent,
+      y: yPercent,
+      duration: 0.6,
+      ease: 'power2.out',
+    });
+  };
 
   ngAfterViewInit(): void {
     this.tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
@@ -79,9 +94,12 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
         },
         2.1,
       );
+
+    document.addEventListener('mousemove', this.onMouseMove);
   }
 
   ngOnDestroy(): void {
+    document.removeEventListener('mousemove', this.onMouseMove);
     this.tl?.kill();
   }
 }
