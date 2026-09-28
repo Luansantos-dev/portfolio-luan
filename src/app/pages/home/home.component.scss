@@ -111,23 +111,15 @@
   position: relative;
 }
 
-.home__avatar-ring {
-  position: absolute;
-  inset: -8px;
-  border-radius: 20px;
-  background: linear-gradient(135deg, rgba(167,139,250,0.3), transparent 60%);
-  z-index: 0;
-}
-
 .home__avatar {
-  position: relative;
-  z-index: 1;
-  display: block;
-  width: 300px;
-  height: 300px;
+  width: 420px;
+  height: 500px;
   object-fit: cover;
-  border-radius: 16px;
-  border: 1.5px solid rgba(167,139,250,0.3);
+  object-position: center top;
+  border-radius: 0;
+  border: none;
+  background: transparent;
+  mix-blend-mode: lighten;
 }
 
 @media (max-width: 720px) {
